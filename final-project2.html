@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Japanese Cyberpunk Tour</title>
+    <style>
+      body {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/812/original/WallpaperDog-17167859.gif?1651000909);
+        background-size: 1500px;
+      }
+      h1 {
+        text-align: center;
+        font-family: "Orbitron", sans-serif;
+        padding: 20px 5px 0px;
+        line-height: 60px;
+        font-size: 50px;
+        text-decoration: underline;
+        display: inline-block;
+      }
+      hr {
+        color: black;
+        max-width: 500px;
+      }
+
+      h2 {
+        text-align: center;
+        margin: 0px;
+        padding: 0px 70px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 28px;
+        display: inline-block;
+        max-width: 700px;
+      }
+      ul {
+        list-style: none;
+        padding: 0px;
+      }
+      p {
+        font-size: 18px;
+        font-style: italic;
+        font-weight: bold;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .general {
+        text-align: center;
+        max-width: 1000px;
+        margin: auto;
+        background-color: rgba(218, 216, 254, 0.9);
+        border-radius: 50px;
+        border: 0.5px solid #f76bc0;
+        box-shadow: 0px 0px 50px 20px rgba(247, 107, 192, 0.5);
+      }
+      .place-name {
+        font-size: 25px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 500;
+        padding: 15px 0px;
+        line-height: 20px;
+        border: 1px double rgba(247, 107, 192, 0.5);
+        border-radius: 60px;
+        box-shadow: 0px 0px 5px 3px rgba(202, 12, 93, 0.5) inset;
+        margin: 0 auto;
+        max-width: 490px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+      .horizontal {
+        border: 1px solid rgba(218, 216, 254, 0.7);
+        padding: 5px;
+        border-radius: 5px;
+        filter: grayscale(100%);
+        width: 390px;
+        height: 265px;
+        transition: all 200ms ease-in-out;
+      }
+
+      .horizontal:hover {
+        filter: none;
+        transform: scale(105%);
+      }
+      .text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 250;
+        font-size: 20px;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 810px;
+        padding: 15px 40px 10px;
+        display: inline-block;
+      }
+      .link {
+        color: #e93fa5;
+      }
+      .vertical-img {
+        width: 300px;
+        height: 400px;
+        border: 1px solid rgba(218, 216, 254, 0.7);
+        border-radius: 5px;
+        filter: grayscale(100%);
+        padding: 5px;
+      }
+      .vertical-img:hover {
+        filter: none;
+        transform: scale(105%);
+      }
+      .ending {
+        font-size: 18px;
+        font-style: italic;
+        font-weight: bold;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        margin-bottom: 20px;
+      }
+      button {
+        font-size: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        padding: 15px 50px;
+        border: 2px dotted rgba(202, 12, 93, 0.5);
+        border-radius: 30px;
+        margin-bottom: 10px;
+        color: white;
+        background: linear-gradient(
+          112.4deg,
+          rgb(176, 174, 225) 44.9%,
+          rgb(135, 197, 235) 94.5%
+        );
+        transition: all 200ms ease-in-out;
+        box-shadow: 2px 2px 5px 2px rgba(57, 57, 59, 0.4);
+        cursor: pointer;
+      }
+      button:hover {
+        background: linear-gradient(
+          to top,
+          rgb(251, 194, 235) 0%,
+          rgb(166, 193, 238) 100%
+        );
+        color: #cb1ab0;
+      }
+      .about-me {
+        font-size: 15px;
+        font-family: monospace;
+        color: rgba(121, 75, 219, 0.5);
+        margin-top: 35px;
+      }
+      .contactBorder {
+        border: 1.5px solid rgba(202, 12, 93, 0.3);
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 20px 0px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px 1px rgba(215, 79, 138, 0.5);
+      }
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 99; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+      }
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 75%;
+        max-width: 75%;
+      }
+      #caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+      }
+      @-webkit-keyframes zoom {
+        from {
+          -webkit-transform: scale(1);
+        }
+        to {
+          -webkit-transform: scale(2);
+        }
+      }
+      @keyframes zoom {
+        from {
+          transform: scale(0.4);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      @-webkit-keyframes zoom-out {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(0);
+        }
+      }
+      @keyframes zoom-out {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(0);
+        }
+      }
+      .modal-content,
+      #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+      .out {
+        animation-name: zoom-out;
+        animation-duration: 0.6s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="general">
+      <h1>Japanese Cyberpunk</h1>
+      <h2>
+        Japan has influenced the creation of many forms of literature, with one
+        of the most distinctive being cyberpunk. Tropes of this sci-fi subgenre
+        include advanced, dystopian cities, corrupt mega corporations, oppressed
+        outsiders fighting to bring down the machine and Japanese aesthetics
+        front and centre.
+      </h2>
+      <hr />
+
+      <p>⎯ Here is a list of cyberpunk places in Tokyo for you to explore ⎯</p>
+      <ul>
+        <li>
+          <div class="place-name">KAWASAKI WAREHOUSE</div>
+          <img
+            class="horizontal"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/744/original/9050158486_10c4d153fd_b.jpeg?1650914506"
+            width="400px"
+          />
+          <img
+            class="horizontal"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/743/original/9047939925_c3ca94d2a5_b.jpeg?1650914491"
+            width="400px"
+          />
+          <img
+            class="horizontal"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/746/original/9050178340_e7f4d416e3_b.jpeg?1650914539"
+            width="400px"
+          />
+          <img
+            class="horizontal"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/747/original/9050182430_21918e45da_b.jpeg?1650914567"
+            width="400px"
+          />
+          <br />
+          <span class="text">
+            This is Warehouse Kawasaki, one of Japan’s most peculiar video game
+            arcades, modelled after Hong Kong’s former
+            <a
+              class="link"
+              href="https://en.wikipedia.org/wiki/Kowloon_Walled_City"
+              target="_blank"
+              >Kowloon Walled City</a
+            >, an ungoverned and overpopulated slum superstructure that to this
+            day influences aesthetics in cyberpunk and Hong Kong settings.
+            Warehouse Kawasaki opened in 2005 as one of Geo Corporation’s Anata
+            no Warehouse amusement centres, and was renovated in 2009 to its
+            current “Cyber Kowloon Walled City” state with the design handled by
+            Hoshino-Gumi.
+          </span>
+        </li>
+        <li>
+          <div class="place-name">KABUKICHŌ DISTRICT IN SHINJUKU</div>
+          <img
+            class="horizontal"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/751/original/jw-5d1492753dd390.68883993.jpeg?1650916270"
+          />
+          <img
+            class="horizontal"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/752/original/lights-of-Kabukicho%CC%84-Tokyo-121.jpeg?1650916302"
+          />
+          <img
+            class="horizontal"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/753/original/image.jpeg?1650916476"
+          />
+          <img
+            class="horizontal"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/754/original/d3e5f82106d54b0953785c3b6a5f9a56.jpeg?1650916488"
+          />
+          <br />
+          <span class="text">
+            Kabukichō is an entertainment and red-light district in Shinjuku,
+            Tokyo, Japan.
+            <a
+              class="link"
+              href="https://en.wikipedia.org/wiki/Kabukich%C5%8D"
+              target="_blank"
+              >Kabuki-chō</a
+            >
+            is the location of many host and hostess clubs, love hotels, shops,
+            restaurants, and nightclubs, and is often called the "Sleepless
+            Town".
+          </span>
+        </li>
+        <li>
+          <div class="place-name">AKIHABARA - ELECTRIC CITY</div>
+          <img
+            class="vertical-img"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/755/original/d6bb4a98694471f7b424a5b04a28f679.jpeg?1650917914"
+            width="400px"
+          />
+          <img
+            class="vertical-img"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/756/original/d588739e6cb3c1c19f8fb1f985e18765.jpeg?1650917921"
+            width="400px"
+          />
+          <img
+            class="vertical-img"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/757/original/9ecdc67e0217014c9e7d51cc0b379bae.png?1650917962"
+            width="480px"
+          />
+          <br />
+          <span class="text">
+            Akihabara is a common name for the area around Akihabara Station in
+            the Chiyoda ward of Tokyo, Japan.Akihabara gained the nickname
+            Akihabara Electric Town shortly after World War II for being a major
+            shopping center for household electronic goods and the post-war
+            black market.
+            <a
+              class="link"
+              href="https://en.wikipedia.org/wiki/Akihabara"
+              target="_blank"
+              >Akihabara</a
+            >
+            is considered by many to be the centre of modern Japanese popular
+            culture and a major shopping district for video games, anime, manga,
+            electronics and computer-related goods.
+          </span>
+        </li>
+        <li>
+          <div class="place-name">CYBERPUNK MAID CAFE IN AKIHABARA</div>
+          <img
+            class="horizontal"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/798/original/akiba.jpeg?1650988672"
+            width="400px"
+          />
+          <img
+            class="horizontal"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/799/original/akiba2.jpeg?1650988678"
+            width="400px"
+          />
+          <img
+            class="horizontal"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/800/original/akiba3.jpeg?1650988688"
+            width="400px"
+          />
+          <img
+            class="horizontal"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/032/804/original/akiba7.jpeg?1650992705"
+            width="400px"
+          />
+          <br />
+          <span class="text">
+            The new cafe aims to capture Akihabara’s techno-cool image in its
+            design, taking inspiration from futuristic films like "Ghost in the
+            Shell," "Blade Runner," "Neon Genesis Evangelion" and "Super
+            Dimension Fortress Macross." The cyberpunk theme extends to the
+            menu, which includes meals like the Omurice Plate (1,450 yen),
+            designed to look like a dystopian meal from a maid cafe in the
+            future.
+          </span>
+          <br />
+        </li>
+      </ul>
+      <div class="contactBorder">
+        <div class="ending">
+          If you are interested in a cyberpunk themed tour of Tokyo
+          <br />
+          ⇢ press the button
+        </div>
+        <button>I want a trip!</button>
+      </div>
+      <br />
+      <p class="about-me">Coded by Ellen Spencia</p>
+    </div>
+    <div id="myModal" class="modal">
+      <img class="modal-content" id="img01" />
+      <div id="caption"></div>
+    </div>
+    <script>
+      function tripButton() {
+        let yourName = prompt("What is your name?");
+        if (yourName === null) {
+          return;
+        }
+        let yourEmail = prompt("What is your email adress?");
+        let yourAge = prompt("How old are you?");
+        if (yourAge >= 18) {
+          alert(
+            `Hello,${yourName}! We will contact ${yourEmail} for more details! Have a good day🌸`
+          );
+        } else {
+          alert(
+            `Hello, ${yourName}! We will provide you with more info by ${yourEmail}. We are unable to offer our services to persons under the age of 18.`
+          );
+        }
+      }
+      let contactButton = document.querySelector("button");
+      contactButton.addEventListener("click", tripButton);
+
+      // Get the modal
+      const modal = document.getElementById("myModal");
+      const modalImg = document.getElementById("img01");
+      const captionText = document.getElementById("caption");
+      var img = document.querySelectorAll(".horizontal,.vertical-img");
+
+      for (var i = 0; i < img.length; i++) {
+        img[i].onclick = function () {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          modalImg.alt = this.alt;
+          captionText.innerHTML = this.alt;
+        };
+      }
+      // When the user clicks on <span> (x), close the modal
+      modal.onclick = function () {
+        img01.className += " out";
+        setTimeout(function () {
+          modal.style.display = "none";
+          img01.className = "modal-content";
+        }, 400);
+      };
+    </script>
+  </body>
+</html>
